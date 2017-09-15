@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=springMVC/D:\/eclipse_neno\/web_framwork\/springMVC\/WebContent\/WEB-INF\/lib\/spring-webmvc-4.3.2.RELEASE.jar&lt;org.springframework.web.servlet.mvc(Controller.class[Controller" modifiers="1537" timestamp="1502790299629"/>
+<typeInfo handle="=springMVCProject/D:\/eclipse_neno\/web_framwork\/springMVCProject\/WebContent\/WEB-INF\/lib\/spring-webmvc-4.3.2.RELEASE.jar&lt;org.springframework.web.servlet.mvc(Controller.class[Controller" modifiers="1537" timestamp="1502790299629"/>
+<typeInfo handle="=springmybatis/src&lt;com.service{IStuClassService.java[IStuClassService" modifiers="513" timestamp="1503286699694"/>
+<typeInfo handle="=springmybatis/D:\/eclipse_neno\/web_framwork\/springmybatis\/WebContent\/WEB-INF\/lib\/spring-webmvc-4.3.2.RELEASE.jar&lt;org.springframework.web.servlet(HandlerInterceptor.class[HandlerInterceptor" modifiers="1537" timestamp="1502790299629"/>
+<typeInfo handle="=springmybatis/D:\/eclipse_neno\/web_framwork\/springmybatis\/WebContent\/WEB-INF\/lib\/spring-webmvc-portlet-4.3.2.RELEASE.jar&lt;org.springframework.web.portlet(HandlerInterceptor.class[HandlerInterceptor" modifiers="1537" timestamp="1502790299654"/>
+<typeInfo handle="=springmybatis/src&lt;com.service{IUserService.java[IUserService" modifiers="513" timestamp="1503911076529"/>
+<typeInfo handle="=filterTest/C:\/Program Files\/Java\/jre1.8.0_144\/lib\/rt.jar&lt;java.util.logging(Filter.class[Filter" modifiers="1537" timestamp="1502288053192"/>
+<typeInfo handle="=filterTest/E:\/apache-tomcat-7.0.40\/lib\/servlet-api.jar&lt;javax.servlet(Filter.class[Filter" modifiers="1537" timestamp="1367715308000"/>
+</typeInfoHistroy>

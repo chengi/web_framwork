@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.itcast.ssm.mapper.ClassesMapper">
+	<resultMap type="classes" id="getAllClassesResultMap">
+		<id column="cls_id" property="cid"/>
+		<result column="cls_name" property="cname"/>
+	</resultMap>
+	<!-- 查询所有班级信息 -->
+    <select id="getAllClasses" resultMap="getAllClassesResultMap">
+   	 	select cls_id,cls_name from classes
+    </select>
+</mapper>

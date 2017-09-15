@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="stusql">
+
+	<select id="findAll"
+	resultType="com.bean.Student">
+		select * from stu
+	</select>
+	
+	<select id="findByName" parameterType="string"
+	resultType="com.bean.Student">
+		select * from stu where sname like #{sname}
+	</select>
+	<insert id="insert" parameterType="com.bean.Student">
+		insert into stu (sno,sname,age,sclass) values(seq_stu.nextval,#{sname},#{age},#{sclass})
+	</insert>
+	
+	<delete id="delete"
+	parameterType="int">
+		delete from stu where sno=#{sno}
+	</delete>
+</mapper>

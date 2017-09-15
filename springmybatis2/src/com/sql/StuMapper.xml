@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.StuDao">
+	
+	<resultMap type="com.bean.Student" id="findAllResultMap">
+		<id column="sno" property="sno"/>
+		<result column="sname" property="sname"/>
+		<result column="age" property="age"/>
+		<association property="stuClass" javaType="com.bean.StuClass">
+		<id column="scno" property="scno"/>
+		<result column="scname" property="scname"/>
+		</association>
+	</resultMap>
+	<select id="findAll"
+	parameterType="com.bean.Page"
+	resultMap="findAllResultMap">
+		<!-- select s.sno,s.sname,s.age,sc.scno,sc.scname from stu s inner join stuclass sc on s.sclass=sc.scno -->
+		select * from (select rownum rn, s.sno, s.sname, s.age, sc.scno, sc.scname
+  		from stu s
+ 		inner join stuclass sc
+    	on s.sclass = sc.scno) t 
+    	
+    	<![CDATA[where t.rn>#{pageStart} and t.rn<=#{pageEnd}]]>
+    	
+	</select>
+	
+	<select id="findBySno"
+	parameterType="int"  resultMap="findAllResultMap">
+		select s.sno,s.sname,s.age,sc.scno,sc.scname 
+		from stu s inner join stuclass sc on s.sclass=sc.scno 
+		where sno=#{sno}
+	</select>
+	
+	<delete id="deleteBySno"
+	parameterType="int">
+		delete from stu where sno=#{sno}
+	</delete>
+	
+	<insert id="insertStu"
+	parameterType="com.bean.Student">
+		insert into stu (sno,sname,age,sclass) values(seq_stu.nextval,#{sname},#{age},#{stuClass.scno})
+	</insert>
+	
+	<update id="updateStu"
+	parameterType="com.bean.Student">
+		update stu 
+		<set>
+			<if test="sname !=null">sname=#{sname},</if>
+			<if test="age !=null">age=#{age}</if>
+		</set> 
+		where sno=#{sno}
+	</update>
+	<select id="getRowSum" resultType="int">
+		select count(*) from stu
+	</select>
+</mapper>

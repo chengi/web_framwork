@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 对Dao层接口的实现，sql语句 -->
+<mapper namespace="com.dao.AnnouncementInfoDao">
+	<!-- 增加 ，id通过序列进行排序-->
+	<insert id="add" parameterType="com.entity.AnnouncementInfo">
+		insert into
+		ANNOUNCEMENTINFO (id,publisher,title,content,pub_date)VALUES(seq_ANNOUNCEMENTINFO_id.nextval,#{publisher},#{title},#{content},sysdate)
+	</insert>
+
+	<!-- 根据id查询得到一个AnnouncementInfo对象 -->
+	<select id="get" parameterType="java.lang.Integer" resultType="com.entity.AnnouncementInfo">
+		select *  from  AnnouncementInfo where id=#{id}
+	</select>
+
+	<!-- 删除 -->
+	<delete id="delete" parameterType="java.lang.Integer">
+		delete  from AnnouncementInfo
+		where id=#{id}
+	</delete>
+	<!-- 修改，sysdate为公告提交时的系统时间 -->
+	<update id="update" parameterType="com.entity.AnnouncementInfo"
+		statementType="PREPARED">
+		update  AnnouncementInfo
+		<set>
+			<if test="publisher != null">publisher = #{publisher},</if>
+			<if test="title != null">title = #{title},</if>
+			<if test="content != null">content = #{content},</if>
+			pub_date =sysdate
+		</set>
+		where id = #{id}
+	</update>
+	<!--查询全部公告 -->
+	<select id="getAll" parameterType="java.util.List" resultType="com.entity.AnnouncementInfo">
+		select * from AnnouncementInfo
+	</select>
+
+
+</mapper>

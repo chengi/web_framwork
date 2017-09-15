@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.itcast.ssm.mapper.StudentMapper">
+	<sql id="query_student_where">
+		<if test="stu != null">
+			<if test="stu.sname != null and stu.sname != ''">
+				and stu_name like '%${stu.sname}%'
+			</if>
+			<if test="stu.age != null">
+				and age = #{stu.age}
+			</if>
+			<if
+				test="stu.classes != null and stu.classes.cid != null and stu.classes.cid != -1">
+				and class_id = #{stu.classes.cid}
+			</if>
+		</if>
+
+
+	</sql>
+	<resultMap type="students" id="getAllStudentsResultMap">
+		<id column="stu_id" property="sid" />
+		<result column="stu_name" property="sname" />
+		<result column="age" property="age" />
+		<result column="class_id" property="cid" />
+		<association property="classes" javaType="classes">
+			<id column="cls_id" property="cid" />
+			<result column="cls_name" property="cname" />
+		</association>
+	</resultMap>
+	<!-- 查询指定条件，指定页号的学生 -->
+	<select id="getAllStudents" parameterType="studentsCustom"
+		resultMap="getAllStudentsResultMap">
+		select t.stu_id,t.stu_name,t.age,t.class_id,c.cls_id,c.cls_name
+		from (
+		SELECT * FROM ( SELECT A.*,ROWNUM RN FROM (SELECT * FROM students
+		<where>
+			<include refid="query_student_where"></include>
+		</where>
+	<![CDATA[
+		order by stu_id) A WHERE ROWNUM <= #{pageInfo.endPos} ) WHERE RN >=
+		#{pageInfo.startPos}
+		) t,classes c where t.class_id=c.cls_id 
+	]]>
+	</select>
+	<!-- 查询指定条件的学生个数 -->
+	<select id="getCount" parameterType="students" resultType="int">
+		select count(*) from students
+		<where>
+			<include refid="query_student_where"></include>
+		</where>
+	</select>
+	<!-- 添加学生 -->
+	<insert id="addStu" parameterType="students">
+		insert into
+		students(stu_name,age,class_id) values(#{sname},#{age},#{classes.cid})
+	</insert>
+	<!-- 根据id删除学生 -->
+	<delete id="deleteStu" parameterType="int">
+		delete from students where
+		stu_id = #{sid}
+	</delete>
+	<!-- 根据id查询学生 -->
+	<select id="getStudentById" parameterType="int"
+		resultMap="getAllStudentsResultMap">
+		select
+		s.stu_id,s.stu_name,s.age,s.class_id,c.cls_id,c.cls_name from students
+		s,classes c where s.class_id=c.cls_id and s.stu_id = #{sid}
+	</select>
+	<!-- 修改学生 -->
+	<update id="updateStu" parameterType="students">
+		update students
+		<set>
+			<if test="sname != null">stu_name=#{sname},</if>
+			<if test="age != null">age=#{age},</if>
+			<if test="classes != null and classes.cid != null">class_id=#{classes.cid},</if>
+		</set>
+		where stu_id=#{sid}
+	</update>
+</mapper>

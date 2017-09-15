@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<title>东风商用车有限公司 上网认证系统 - 登录</title> 
+<link rel="stylesheet" type="text/css" href="/styles/util.css" />
+<script language="javascript" src="/scripts/util.js"></script>
+<script language="javascript">
+function preSubmit(){
+	var usr = $("username"),
+		pwd = $("password"),
+		hPwd = $("pwd"),
+		re = / /g,
+		usrStr, pwdStr,
+		msg = null;
+
+	if(usr.value.length <= 0){
+		valid = false;
+		msg = "用户名不能为空！";
+	}else if(usr.value.length > 95){
+		valid = false;
+		msg = "用户名长度不能超过95个字节！";
+	}
+	if(msg){
+		alert(msg);
+		return false;
+	}
+	hPwd.value = pwd.value;
+	return true;
+}
+
+function initPage(){
+	var msg = initMsg(true), username, usernameDom = $("username");
+	if(msg){
+		var result = msg.match(/\(([^\)]+)\)/);
+		if(result){
+			username = result[1];
+			usernameDom.value = username;
+		}
+		showMsg(msg);
+	}
+	usernameDom.focus();
+}
+</script>
+<style type="text/css"> 
+.text-field-wrap {
+	padding-left: 60px;
+}</style> 
+</head> 
+ 
+<body onload="initPage();"> 
+<div class="title">东风商用车有限公司 上网认证系统 - 登录</div> 
+<div class="content"> 
+  <p style=" padding-bottom:10px; color:#666">依据国家《互联网安全保护技术措施规定》，需要您在访问因特网前输入用户名和密码。<br><br>
+According to the national "Internet security protection technology measures", you need to enter your username & password to access to the Internet.</p> 
+<form method="post" onsubmit="return preSubmit();">
+	<div class="field-wrap">
+		<span class="field-label">用户名：</span> 
+		<div class="text-field-wrap">
+			<input id="username" name="username" class="text-field field-username" type="text" />
+		</div>
+	</div> 
+  
+	<div class="field-wrap">
+		<span class="field-label">密码：</span> 
+		<div class="text-field-wrap">
+			<input  id="password" name="password" class="text-field field-password" type="password" />
+			<input id="pwd" type="hidden" name="pwd" value="">
+		</div>
+	</div> 
+    
+    <input type="hidden" name="secret" value="true">
+    
+  <p style="padding-left:60px;margin-top:16px;"> 
+  <input type="submit" class="buttons" value="登 录" /> 
+  </p> 
+</form>
+	<p style="padding-left:60px;margin-top:30px;">
+温馨提示：用户名、密码为用户在DFCV AD域中的用户名、密码（即DFCV邮件系统用户名不带@dfcv.com.cn后缀）<br><br>
+Note: The Username & Password are as the same as that in DFCV AD domain ( i.e. DFCV email system username without the suffix @dfcv.com.cn ) 
+	</p> 
+</div> 
+</body> 
+</html>

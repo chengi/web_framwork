@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;jstl/WebContent/WEB-INF/viewIp.ltd&apos; to &apos;viewIp.tld&apos;" description="Rename resource &apos;viewIp.ltd&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/WEB-INF/viewIp.ltd" name="viewIp.tld" stamp="1502721543797" updateReferences="true"/>
+</session>

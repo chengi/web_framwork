@@ -1,0 +1,17 @@
+package cn.controller;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Controller;
+
+import cn.service.impl.LoginService;
+
+@Controller
+public class MyController {
+
+	@Resource
+	private LoginService loginService;
+	public String login(){
+		
+	}
+}

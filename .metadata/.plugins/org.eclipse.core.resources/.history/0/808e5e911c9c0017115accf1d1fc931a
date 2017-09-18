@@ -1,0 +1,14 @@
+package cn.service.impl;
+
+import cn.bean.User;
+import cn.service.ILoginService;
+
+public class LoginService implements ILoginService {
+
+	@Override
+	public boolean isExist(User user) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

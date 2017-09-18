@@ -1,0 +1,7 @@
+package cn.huat.dao;
+
+public class Grade {
+	
+	private int grade_id;
+	private String grade_name;
+}

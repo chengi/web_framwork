@@ -1,0 +1,5 @@
+package cn.huat.dao;
+
+public class Customer {
+
+}

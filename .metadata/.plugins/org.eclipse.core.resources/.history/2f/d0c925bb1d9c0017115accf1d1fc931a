@@ -1,0 +1,14 @@
+package cn.controller;
+
+import org.springframework.stereotype.Controller;
+
+import cn.service.impl.LoginService;
+
+@Controller
+public class MyController {
+
+	private LoginService loginService;
+	public String login(){
+		
+	}
+}

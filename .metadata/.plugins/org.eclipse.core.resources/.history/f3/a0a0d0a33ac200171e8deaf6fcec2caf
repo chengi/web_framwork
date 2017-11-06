@@ -1,0 +1,15 @@
+package adapterPattern;
+
+public class MediaAdapter implements MediaPlayer {
+
+	AdvancedMediaPlayer advancedMediaPlayer;
+	public MediaAdapter(String audioType){
+		
+	}
+	@Override
+	public void play(String audioType, String fileName) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

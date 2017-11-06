@@ -1,0 +1,8 @@
+package AbstructFactoryPatternDemo;
+
+public class ColorFactory {
+
+	public Color getColor(String color){
+		
+	}
+}

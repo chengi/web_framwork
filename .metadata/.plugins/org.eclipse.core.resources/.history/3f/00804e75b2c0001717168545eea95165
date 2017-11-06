@@ -1,0 +1,34 @@
+package Test;
+
+import org.junit.Test;
+
+import AbstructFactoryPatternDemo.AbstructFactory;
+import AbstructFactoryPatternDemo.Color;
+import AbstructFactoryPatternDemo.FactoryProducer;
+import AbstructFactoryPatternDemo.Shape;
+import factoryPatternDemo.ShapFactory;
+
+public class MainTest {
+
+	@Test
+	public void testFactoryPattern(){
+		
+		ShapFactory sf = new ShapFactory();
+		sf.getShap("square").draw();
+	}
+	@Test
+	public void testAbstractFactory(){
+		AbstructFactory shapFactory = FactoryProducer.getFactory("shape");
+		Shape s = shapFactory.getShape("circle");
+		s.draw();
+		
+		AbstructFactory colorFactory = FactoryProducer.getFactory("color");
+		Color c = colorFactory.getColor("red");
+		c.fill();
+	}
+	
+	@Test
+	public void testSingleTest(){
+		
+	}
+}

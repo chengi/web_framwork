@@ -1,0 +1,12 @@
+package BridgePattern;
+
+public class Circle extends Shape {
+
+	private int x,y,radius;
+	@Override
+	protected void draw() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

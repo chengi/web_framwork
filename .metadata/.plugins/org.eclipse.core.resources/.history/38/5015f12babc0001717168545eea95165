@@ -1,0 +1,14 @@
+package factoryPatternDemo;
+
+public class ShapFactory {
+
+	public Shape getShap(String shap){
+		if(shap==null)
+			return null;
+		if(shap.equals("circle"))
+			return new Circle();
+		if(shap.equals("square"))
+			return new Square();
+		return null;
+	}
+}

@@ -1,0 +1,8 @@
+package BuilderPattern;
+
+public class MealBuilder {
+
+	public Meal vegMeal(){
+		
+	}
+}

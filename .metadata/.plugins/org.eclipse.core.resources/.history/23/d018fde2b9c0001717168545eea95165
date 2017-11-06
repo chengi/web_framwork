@@ -1,0 +1,50 @@
+package Test;
+
+import org.junit.Test;
+
+import AbstructFactoryPatternDemo.AbstructFactory;
+import AbstructFactoryPatternDemo.Color;
+import AbstructFactoryPatternDemo.FactoryProducer;
+import AbstructFactoryPatternDemo.Shape;
+import BuilderPattern.Meal;
+import BuilderPattern.MealBuilder;
+import factoryPatternDemo.ShapFactory;
+import singletonPattern.SingletObject;
+
+public class MainTest {
+
+	@Test
+	public void testFactoryPattern(){
+		
+		ShapFactory sf = new ShapFactory();
+		sf.getShap("square").draw();
+	}
+	@Test
+	public void testAbstractFactory(){
+		AbstructFactory shapFactory = FactoryProducer.getFactory("shape");
+		Shape s = shapFactory.getShape("circle");
+		s.draw();
+		
+		AbstructFactory colorFactory = FactoryProducer.getFactory("color");
+		Color c = colorFactory.getColor("red");
+		c.fill();
+	}
+	
+	@Test
+	public void testSingleTest(){
+		
+		SingletObject so1 = SingletObject.getInstance();
+		SingletObject so2 = SingletObject.getInstance();
+		System.out.println(so1==so2);
+		
+	}
+	
+	@Test
+	public void testBuilder(){
+		MealBuilder mealBuilder = new MealBuilder();
+		Meal veg = mealBuilder.vegMeal();
+		veg.showItems();
+		veg.getCost();
+		System.out.println("-----------");
+	}
+}

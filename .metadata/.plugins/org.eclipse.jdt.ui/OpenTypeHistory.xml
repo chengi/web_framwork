@@ -8,4 +8,17 @@
 <typeInfo handle="=springmybatis/src&lt;com.service{IUserService.java[IUserService" modifiers="513" timestamp="1503911076529"/>
 <typeInfo handle="=filterTest/C:\/Program Files\/Java\/jre1.8.0_144\/lib\/rt.jar&lt;java.util.logging(Filter.class[Filter" modifiers="1537" timestamp="1502288053192"/>
 <typeInfo handle="=filterTest/E:\/apache-tomcat-7.0.40\/lib\/servlet-api.jar&lt;javax.servlet(Filter.class[Filter" modifiers="1537" timestamp="1367715308000"/>
+<typeInfo handle="=distributionSys/src&lt;cn.service{ILoginService.java[ILoginService" modifiers="513" timestamp="1505702865593"/>
+<typeInfo handle="=struts2_demo2/D:\/eclipse_neno\/web_framwork\/struts2_demo2\/WebContent\/WEB-INF\/lib\/xwork-core-2.3.24.jar&lt;com.opensymphony.xwork2(ActionSupport.class[ActionSupport" modifiers="33" timestamp="1506139809178"/>
+<typeInfo handle="=DesignPattern/src&lt;AbstructFactoryPatternDemo{Color.java[Color" modifiers="513" timestamp="1509722730971"/>
+<typeInfo handle="=DesignPattern/C:\/Program Files\/Java\/jre1.8.0_144\/lib\/rt.jar&lt;javax.lang.model.element(PackageElement.class[PackageElement" modifiers="1537" timestamp="1502288053192"/>
+<typeInfo handle="=DesignPattern/src&lt;BuilderPattern{Packing.java[Packing" modifiers="513" timestamp="1509726631007"/>
+<typeInfo handle="=DesignPattern/src&lt;BuilderPattern{Item.java[Item" modifiers="513" timestamp="1509726510284"/>
+<typeInfo handle="=DesignPattern/src&lt;BuilderPattern{Buger.java[Buger" modifiers="1025" timestamp="1509727409023"/>
+<typeInfo handle="=DesignPattern/src&lt;BuilderPattern{ColdDrink.java[ColdDrink" modifiers="1025" timestamp="1509727540484"/>
+<typeInfo handle="=DesignPattern/C:\/Program Files\/Java\/jre1.8.0_144\/lib\/rt.jar&lt;java.awt(Adjustable.class[Adjustable" modifiers="1537" timestamp="1502288053192"/>
+<typeInfo handle="=DesignPattern/src&lt;adapterPattern{AdvancedMediaPlayer.java[AdvancedMediaPlayer" modifiers="513" timestamp="1509893344120"/>
+<typeInfo handle="=DesignPattern/src&lt;adapterPattern{MediaPlayer.java[MediaPlayer" modifiers="513" timestamp="1509893281151"/>
+<typeInfo handle="=DesignPattern/src&lt;BridgePattern{DrawAPI.java[DrawAPI" modifiers="513" timestamp="1509895685928"/>
+<typeInfo handle="=DesignPattern/src&lt;BridgePattern{Shape.java[Shape" modifiers="1025" timestamp="1509896277128"/>
 </typeInfoHistroy>

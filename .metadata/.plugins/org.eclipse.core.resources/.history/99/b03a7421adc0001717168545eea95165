@@ -1,0 +1,7 @@
+package AbstructFactoryPatternDemo;
+
+public abstract class AbstructFactory {
+
+	public abstract ColorFactory();
+	
+}

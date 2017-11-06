@@ -1,4 +1,2 @@
 #Tomcat publish data
-#Mon Sep 18 14:33:29 CST 2017
-org.eclipse.jst.jee.server\:/binary\:D\:\\eclipse_neno\\web_framwork\\distributionSys\\WebContent\\WEB-INF\\lib\\spring-web-4.3.2.RELEASE-sources.jar=WEB-INF/lib/spring-web-4.3.2.RELEASE-sources.jar
-org.eclipse.jst.jee.server\:/binary\:D\:\\eclipse_neno\\web_framwork\\distributionSys\\WebContent\\WEB-INF\\lib\\spring-web-4.3.2.RELEASE.jar=WEB-INF/lib/spring-web-4.3.2.RELEASE.jar
+#Sat Sep 23 12:25:58 CST 2017

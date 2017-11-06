@@ -1,0 +1,6 @@
+package factoryPatternDemo;
+
+public interface Shap {
+
+	void draw();
+}

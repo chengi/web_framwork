@@ -1,0 +1,11 @@
+package BuilderPattern;
+
+public class MealBuilder {
+
+	public Meal vegMeal(){
+		Meal meal = new Meal();
+		
+		
+		return meal;
+	}
+}

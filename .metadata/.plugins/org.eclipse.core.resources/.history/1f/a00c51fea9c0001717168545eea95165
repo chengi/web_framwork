@@ -1,0 +1,10 @@
+package huat.create_pattern;
+
+public class AbstractFactoryDemo {
+
+	public static void main(String[] args) {
+		// 该设计模式是一个超级工厂用来创建其他工厂。
+
+	}
+
+}

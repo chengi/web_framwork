@@ -1,0 +1,13 @@
+package singletonPattern;
+
+public class SingletObject {
+
+	private static SingletObject instance = 
+						new SingletObject();
+	private SingletObject(){};//构造方法私有，只能内部调用
+	
+	public static SingletObject getInstance(){
+		return instance;
+	}
+	
+}

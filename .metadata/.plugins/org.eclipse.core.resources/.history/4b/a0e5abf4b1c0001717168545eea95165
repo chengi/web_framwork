@@ -1,0 +1,7 @@
+package singletonPattern;
+
+public class SingletObject {
+
+	private static SingletObject instance = 
+						new SingletObject();
+}

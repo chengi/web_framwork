@@ -1,0 +1,8 @@
+package AbstructFactoryPatternDemo;
+
+public abstract class AbstructFactory {
+
+	public abstract Color getColor(String color);
+	public abstract Shape getShape(Shape shape);
+	
+}

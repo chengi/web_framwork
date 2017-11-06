@@ -1,0 +1,15 @@
+package AbstructFactoryPatternDemo;
+
+public class ColorFactory {
+
+//	public Color getColor(String color){
+//		if(color==null)
+//			return null;
+//		if(color.equals("red"))
+//			return new Red();
+//		if(color.equals("green"))
+//			return new Green();
+//		
+//		return null;
+//	}
+}

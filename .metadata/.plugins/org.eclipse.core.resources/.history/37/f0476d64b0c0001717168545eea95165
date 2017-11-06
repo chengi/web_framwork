@@ -1,0 +1,24 @@
+package Test;
+
+import org.junit.Test;
+
+import AbstructFactoryPatternDemo.AbstructFactory;
+import AbstructFactoryPatternDemo.FactoryProducer;
+import AbstructFactoryPatternDemo.Shape;
+import AbstructFactoryPatternDemo.ShapeFactory;
+import factoryPatternDemo.ShapFactory;
+
+public class MainTest {
+
+	@Test
+	public void testFactoryPattern(){
+		
+		ShapFactory sf = new ShapFactory();
+		sf.getShap("square").draw();
+	}
+	@Test
+	public void testAbstractFactory(){
+		AbstructFactory sf = FactoryProducer.getFactory("shape");
+		sf.getShape("circle");
+	}
+}

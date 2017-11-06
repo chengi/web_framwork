@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--约束  -->
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    <hibernate-mapping>
+    
+    	<!-- 1.配置类和表对应
+    		2.配置id(唯一标识)
+    		3.配置其他属性和表中字段对应
+    	 -->
+    	<class name="cn.huat.entity.Student" table="t_student">
+    		<id name="sid" column="sid">
+    		<!-- 设置主属性的自增长 -->
+    			<generator class="native"></generator>
+    		</id>
+    		
+    		<property name="name" column="name"></property>
+    		<property name="age" column="age"></property>
+    		<property name="gender" column="gender"></property>
+    		
+    		<many-to-one name="clazz" class="cn.huat.entity.Clazz" column="cid"></many-to-one>
+    	</class>
+    </hibernate-mapping>

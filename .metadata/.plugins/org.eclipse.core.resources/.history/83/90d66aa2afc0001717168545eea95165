@@ -1,0 +1,15 @@
+package Test;
+
+import org.junit.Test;
+
+import factoryPatternDemo.ShapFactory;
+
+public class MainTest {
+
+	@Test
+	public void testFactoryPattern(){
+		
+		ShapFactory sf = new ShapFactory();
+		sf.getShap("square").draw();
+	}
+}

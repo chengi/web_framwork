@@ -1,0 +1,31 @@
+package AbstructFactoryPatternDemo;
+
+public class ShapeFactory extends AbstructFactory {
+
+	@Override
+	public Color getColor(String color) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Shape getShape(Shape shape) {
+		if(shape==null)
+			return null;
+		if(shape.equals("circle"))
+			return new Circle();
+		if(shape.equals("square"))
+			return new Square();
+		return null;
+	}
+
+//	public Shape getShap(String shap){
+//		if(shap==null)
+//			return null;
+//		if(shap.equals("circle"))
+//			return new Circle();
+//		if(shap.equals("square"))
+//			return new Square();
+//		return null;
+//	}
+}

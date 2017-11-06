@@ -1,0 +1,15 @@
+package AbstructFactoryPatternDemo;
+
+public class FactoryProducer {
+
+	public static AbstructFactory getFactory(String choice){
+		
+		if(choice.equals("color"))
+			return new ColorFactory();
+		if(choice.equals("shape"))
+			return new ShapeFactory();
+		
+		return null;
+		
+	}
+}

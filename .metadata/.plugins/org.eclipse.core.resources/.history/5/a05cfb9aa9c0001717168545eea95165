@@ -1,0 +1,11 @@
+package factoryPatternDemo;
+
+public class Square implements Shap {
+
+	@Override
+	public void draw() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

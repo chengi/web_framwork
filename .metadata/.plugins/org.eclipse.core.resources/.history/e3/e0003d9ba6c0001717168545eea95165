@@ -1,0 +1,10 @@
+package huat.create_pattern;
+
+public class FactoryPatternDemo {
+
+	public static void main(String[] args) {
+		// 工厂设计模式（创造模式）
+
+	}
+
+}

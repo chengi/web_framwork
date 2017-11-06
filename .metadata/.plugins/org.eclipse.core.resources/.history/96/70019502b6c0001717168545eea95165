@@ -1,0 +1,25 @@
+package BuilderPattern;
+
+public abstract class Buger implements Item {
+
+	
+
+	@Override
+	public Packing packing() {
+		// TODO Auto-generated method stub
+		return new Paper();
+	}
+
+	@Override
+	public float price() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public String name() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

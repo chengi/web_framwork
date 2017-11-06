@@ -12,6 +12,7 @@
 		<item value="true" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="D:\学习资料\hibernate\day01天资料\代码\01_hibernate入门案例\hibernate_day01"/>
 			<item value="G:\实训项目\StudentManager_mybatis"/>
 			<item value="C:\Users\czc\Desktop\SSMExam3.0"/>
 			<item value="E:\汽院实训\项目代码\SSM"/>

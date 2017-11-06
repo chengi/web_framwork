@@ -1,0 +1,15 @@
+package adapterPattern;
+
+public class AudioPlayer implements MediaPlayer {
+
+	MediaPlayer mediaPlayer;
+	@Override
+	public void play(String audioType, String fileName) {
+		// TODO Auto-generated method stub
+
+		if(audioType.equals("mp3")){
+			System.out.println("playing a mp3 file. name"+fileName);
+		}
+	}
+
+}

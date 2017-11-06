@@ -1,0 +1,6 @@
+package BridgePattern;
+
+public abstract class Shape {
+
+	protected DrawAPI drawAPI; 
+}

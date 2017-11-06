@@ -1,0 +1,6 @@
+package AbstructFactoryPatternDemo;
+
+public abstract class AbstructFactory {
+
+	
+}

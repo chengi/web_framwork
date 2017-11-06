@@ -1,0 +1,24 @@
+package huat.create_pattern;
+
+public class FactoryPatternDemo {
+
+	public static void main(String[] args) {
+		// 工厂设计模式（创造模式）
+
+	}
+
+}
+//定义一个接口
+interface Shap{
+	void draw();
+}
+//两个类实现该接口
+class Circle implements Shap{
+
+	@Override
+	public void draw() {
+		// TODO Auto-generated method stub
+		System.out.println("circle...");
+	}
+	
+}
